@@ -8,8 +8,7 @@ Adapted Interviewは、AIアバターとの模擬面接ができる面接ツー�
 
 Adapted Interviewは、picivのChatVRMを改良して開発したものです。
 
-- ChatVRM
-    - [ChatVRM](https://github.com/pixiv/ChatVRM)
+- [ChatVRM](https://github.com/pixiv/ChatVRM)
 
 ---
 
@@ -31,7 +30,7 @@ Adapted Interviewの各機能は主に以下の技術を使用しています。
 git clone git@github.com:Koki1111a/ai-interview.git
 ```
 
-ルートディレクトリに以下のファイルをおいてください。
+ルートディレクトリに以下のようなファイル```.env```をおいてください。
 `< >`の部分は実際のキーやIDで書き換えてください。
 ```.env
 NEXT_PUBLIC_AWS_ACCESS_KEY=<your_aws_access_key>
