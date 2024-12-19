@@ -1,39 +1,47 @@
-# ChatVRM
+# Adapted Interview
 
-ChatVRMは、技術共有およびデモンストレーションを主目的としたプロジェクトです。
+Adapted Interviewは、AIアバターとの模擬面接ができる面接ツールです。
 
-本レポジトリは、2024-07-18時点のコードを持ってアーカイブされました。
-今後、ChatVRMに対して変更を加えたい場合、フォークを行って開発いただけますと幸いです。
+コワモテの面接官アバターが選択した企業の情報と提出したESに基づいた質問をしてくれます。
 
 ---
 
-ChatVRMはブラウザで簡単に3Dキャラクターと会話ができるデモアプリケーションです。
+Adapted Interviewは、picivのChatVRMを改良して開発したものです。
 
-VRMファイルをインポートしてキャラクターに合わせた声の調整や、感情表現を含んだ返答文の生成などを行うことができます。
+- ChatVRM
+    - [ChatVRM](https://github.com/pixiv/ChatVRM)
 
-ChatVRMの各機能は主に以下の技術を使用しています。
+---
+
+Adapted Interviewの各機能は主に以下の技術を使用しています。
 
 - ユーザーの音声の認識
     - [Web Speech API(SpeechRecognition)](https://developer.mozilla.org/ja/docs/Web/API/SpeechRecognition)
 - 返答文の生成
-    - [ChatGPT API](https://platform.openai.com/docs/api-reference/chat)
+    - [Claude 3.5 Sonnet](https://aws.amazon.com/jp/bedrock/claude/)
 - 読み上げ音声の生成
     - [Koemotion/Koeiromap API](https://koemotion.rinna.co.jp/)
 - 3Dキャラクターの表示
     - [@pixiv/three-vrm](https://github.com/pixiv/three-vrm)
 
 
-## デモ
-
-Glitchでデモを公開しています。
-
-[https://chatvrm.glitch.me](https://chatvrm.glitch.me)
-
 ## 実行
 ローカル環境で実行する場合はこのリポジトリをクローンするか、ダウンロードしてください。
-
 ```bash
-git clone git@github.com:ryuiryui/AI-interview.git
+git clone git@github.com:Koki1111a/ai-interview.git
+```
+
+ルートディレクトリに以下のファイルをおいてください。
+`< >`の部分は実際のキーやIDで書き換えてください。
+```.env
+NEXT_PUBLIC_AWS_ACCESS_KEY=<your_aws_access_key>
+NEXT_PUBLIC_AWS_SECRET_KEY=<your_aws_secret_key>
+NEXT_PUBLIC_AWS_AGENT_ID_DOCOMO=<docomo_agent_id>
+NEXT_PUBLIC_AWS_ALIAS_ID_DOCOMO=<docomo_alias_id>
+NEXT_PUBLIC_AWS_AGENT_ID_KDDI=<kddi_agent_id>
+NEXT_PUBLIC_AWS_ALIAS_ID_KDDI=<kddi_alias_id>
+NEXT_PUBLIC_AWS_AGENT_ID_SOFTBANK=<softbank_agent_id>
+NEXT_PUBLIC_AWS_ALIAS_ID_SOFTBANK=<softbank_alias_id>
 ```
 
 必要なパッケージをインストールしてください。
@@ -52,16 +60,6 @@ npm run dev
 
 
 ---
-
-## ChatGPT API
-
-ChatVRMでは返答文の生成にChatGPT APIを使用しています。
-
-ChatGPT APIの仕様や利用規約については以下のリンクや公式サイトをご確認ください。
-
-- [https://platform.openai.com/docs/api-reference/chat](https://platform.openai.com/docs/api-reference/chat)
-- [https://openai.com/policies/api-data-usage-policies](https://openai.com/policies/api-data-usage-policies)
-
 
 ## Koeiromap API
 ChatVRMでは返答文の音声読み上げにKoemotionのKoeiromap APIを使用しています。
