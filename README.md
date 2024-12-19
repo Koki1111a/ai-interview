@@ -2,11 +2,11 @@
 
 Adapted Interviewは、AIアバターとの模擬面接ができる面接ツールです。
 
-コワモテの面接官アバターが選択した企業の情報と提出したESに基づいた質問をしてくれます。
+コワモテの面接官アバターが、選択した企業の情報と提出したESに基づいた質問をしてくれます。
 
 ---
 
-Adapted Interviewは、picivのChatVRMを改良して開発したものです。
+Adapted Interviewは、pixivのChatVRMを改良して開発したものです。
 
 - [ChatVRM](https://github.com/pixiv/ChatVRM)
 
